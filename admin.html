@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGIR - Tableau de bord Admin</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <link rel="canonical" href="https://agir-defense.web.app/admin.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-styles.css" />
+</head>
+<body>
+  <div class="gradient-bg"></div>
+
+  <section id="admin-auth" class="auth-gate">
+    <div class="auth-card">
+      <h1>Acces admin AGIR</h1>
+      <p>Connexion requise avec le compte autorise.</p>
+      <button id="admin-login-btn" type="button" class="login-btn">
+        Se connecter avec Google
+      </button>
+      <p id="admin-auth-status" class="auth-status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <div id="admin-container" class="admin-container hidden">
+    <header class="admin-header">
+      <h1>Tableau de Bord AGIR</h1>
+      <p class="subtitle">Statistiques en temps réel</p>
+    </header>
+
+    <main class="admin-main">
+      <!-- Stats Cards -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>Votes Oui</h3>
+            <span class="stat-icon yes">✓</span>
+          </div>
+          <div class="stat-value" id="totalYes">0</div>
+          <p class="stat-label">Prêts à participer</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>Votes Non</h3>
+            <span class="stat-icon no">✕</span>
+          </div>
+          <div class="stat-value" id="totalNo">0</div>
+          <p class="stat-label">Sans intérêt</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>Total des votes</h3>
+            <span class="stat-icon total">📊</span>
+          </div>
+          <div class="stat-value" id="totalVotes">0</div>
+          <p class="stat-label" id="percentage">0% oui</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>Contributeurs</h3>
+            <span class="stat-icon contrib">👥</span>
+          </div>
+          <div class="stat-value" id="totalContributors">0</div>
+          <p class="stat-label">Engagés</p>
+        </div>
+      </section>
+
+      <!-- Chart Section -->
+      <section class="chart-section">
+        <div class="chart-card">
+          <h2>Distribution des votes</h2>
+          <div class="chart-container">
+            <canvas id="votes-chart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Tables -->
+      <section class="tables-grid">
+        <!-- Latest Votes -->
+        <div class="table-card">
+          <h2>Derniers votes</h2>
+          <div class="table-wrapper">
+            <table id="votes-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Choix</th>
+                  <th>Utilisateur</th>
+                </tr>
+              </thead>
+              <tbody id="votes-tbody">
+                <tr><td colspan="3">Chargement...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Contributors List -->
+        <div class="table-card">
+          <h2>Contributeurs engagés</h2>
+          <div class="table-wrapper">
+            <table id="contributors-table">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Email</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="contributors-tbody">
+                <tr><td colspan="4">Chargement...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contribution Breakdown -->
+      <section class="breakdown-section">
+        <div class="breakdown-card">
+          <h2>Types de contribution</h2>
+          <div id="contribution-breakdown" class="breakdown-items">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="admin-footer">
+      <a href="index.html" class="back-link">← Retour au vote</a>
+      <p>Données mises à jour en temps réel • Firestore</p>
+    </footer>
+  </div>
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  
+  <!-- Firebase & Admin Scripts -->
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

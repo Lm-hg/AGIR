@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /.firebase/
+Disallow: /.firebaserc
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin.html
+
+Crawl-delay: 1
+
+Sitemap: https://agir-defense.web.app/sitemap.xml

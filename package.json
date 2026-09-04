@@ -1,0 +1,39 @@
+{
+  "name": "agir-project",
+  "version": "2.0.0",
+  "description": "AGIR - Agence de Gestion des Investigations et Recours | Mobilisation citoyenne contre le racisme",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "python serve.py",
+    "serve": "http-server",
+    "deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "firebase": "^10.7.0",
+    "chart.js": "^4.4.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "firebase-tools": "^13.0.0"
+  },
+  "keywords": [
+    "agir",
+    "racisme",
+    "mobilisation",
+    "justice",
+    "droits",
+    "investigation",
+    "collectif"
+  ],
+  "author": "AGIR Project",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agir-project/agir"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

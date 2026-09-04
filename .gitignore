@@ -1,0 +1,120 @@
+# SÉCURITÉ : Ignorer les fichiers sensibles
+# Firebase Credentials & Secrets
+.env
+.env.local
+.env.*.local
+firebase-config.js
+firebase-key.json
+*.key
+*.pem
+.firebaserc
+.firebase/
+.runtimeconfig.json
+
+# Node Modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+*.orig
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+.cache/
+
+# Python (if using local server)
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Build artifacts
+build/
+dist/
+.parcel-cache/
+.next/
+out/
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build & Dist
+dist/
+build/
+.next/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.eslintcache
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Local development
+serve.py~
+*.orig
+
+# Firebase
+firebase-debug.log
+firebase-config.js (si secrets inline)
+
+# Backups
+*.bak
+*.backup
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio
+.vs/
+*.suo
+*.sln.docstates
+
+# Jetbrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Security
+secrets.json
+credentials.json
+admin-key.json
