@@ -255,15 +255,6 @@ service cloud.firestore {
 ```
 
 3. Clique **Publish**
-
-### 6️⃣ Configurer Email Admin
-
-Actuellement l'admin email est hardcodé: `modestinhounga78@gmail.com`
-
-**Pour changer:**
-- Édite `admin.js` ligne ~15: `const ADMIN_EMAIL = "ton-email@example.com";`
-- Mets à jour dans `firebase-config.example.js` aussi (documentation)
-
 ---
 
 ## 🔒 Sécurité
@@ -294,12 +285,6 @@ Fichiers **obligatoirement ignorés par Git** (voir `.gitignore`):
 - Anonyme Firebase Auth (pas de données perso)
 - Voteur identifié par: `crypto.randomUUID()` sauvegardé en localStorage
 - Impossible de voter deux fois (voterKey unique + Firestore rules)
-
-**Admin (Dashboard):**
-- Google OAuth 2.0 popup
-- Vérification email: `modestinhounga78@gmail.com`
-- Session maintenue via Firebase onAuthStateChanged()
-
 ---
 
 ## 💡 Utilisation
@@ -321,7 +306,7 @@ Fichiers **obligatoirement ignorés par Git** (voir `.gitignore`):
 1. Clique "Se connecter"
 2. Google login popup
 3. Accepte permission Google
-4. Dashboard charge si email = modestinhounga78@gmail.com
+4. Dashboard charge si email = xxxxxxxxxxxxxxx@xxxxx
 5. Voir stats, graphique, votes/contributeurs
 6. Actualisation auto toutes les secondes
 ```
