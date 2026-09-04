@@ -75,7 +75,6 @@ Status "Pending Review" par défaut (admin review manuel)
 
 ✅ **Contrôle d'Accès**
 - Gate d'authentification obligatoire
-- Vérification email (modestinhounga78@gmail.com uniquement)
 - Messages d'erreur user-friendly en français
 - Page robot excluded du SEO (`noindex, nofollow`)
 
