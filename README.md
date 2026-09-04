@@ -430,12 +430,6 @@ cp firebase-config.example.js firebase-config.js
 # Puis remplis avec tes vraies clés Firebase
 ```
 
-### ❌ "Admin access denied" après Google login
-**Vérifier:**
-1. Ton email Firebase = `modestinhounga78@gmail.com` (ou changé dans admin.js)?
-2. Domaine ajouté à "Authorized domains" dans Firebase Console?
-3. Firestore rules publiées?
-
 ### ❌ "Vote collection empty" sur admin dashboard
 **Vérifier:**
 1. Firestore Database créée (pas Realtime Database)?
@@ -452,7 +446,7 @@ cp firebase-config.example.js firebase-config.js
 Pour des questions:
 - Ouvre une **Issue** sur GitHub
 - Consulte la [Documentation Complète](docs/)
-- Envoie un email (contacter Modeste)
+- Envoie un email `modestinhounga78@gmail.com`
 
 ---
 
